@@ -8,7 +8,7 @@ import { Producto } from '../interfaces/producto.interface';
 export class ProductosService {
 
   cargando = true;
-  infoProductos: any[] = [];
+  infoProductos: Producto[] = [];
   productosFiltrado: Producto[] = [];
 
   constructor(private http: HttpClient) {
@@ -26,7 +26,6 @@ export class ProductosService {
           resolve();
         })
     })
-
   }
 
   obtenerProducto(id: String) {
@@ -44,7 +43,7 @@ export class ProductosService {
       })
     }else{
       // aplicar el filtro
-      // this.filtrarProductos(termino)
+      this.filtrarProductos(termino)
     }
   }
 
@@ -52,12 +51,13 @@ export class ProductosService {
     console.log(this.infoProductos);
 
     this.productosFiltrado = [];
-    termino = termino.toLocaleLowerCase();
+    termino = termino.toLowerCase();
 
     this.infoProductos.forEach( prod => {
-      const tituloLower = prod.titulo.toLocaleLowerCase();
-      if(prod.categoria.indexOf(termino) >= 0 || prod.titulo.indexOf(termino)) {
-        this.productosFiltrado.push(prod)
+      const tituloLower = prod.titulo.toLowerCase();
+
+      if(prod.categoria.indexOf(termino) >= 0 || tituloLower.indexOf(termino) >= 0) {
+        this.productosFiltrado.push(prod);
       }
     })
   }

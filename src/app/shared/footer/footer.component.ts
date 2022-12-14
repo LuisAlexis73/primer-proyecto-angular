@@ -12,7 +12,7 @@ export class FooterComponent implements OnInit {
 
   constructor(public _infoService: InfoPaginaService){}
 
-  ngOnInit(): void {
+  ngOnInit() {
     
   }
 

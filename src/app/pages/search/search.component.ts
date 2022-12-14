@@ -17,5 +17,4 @@ export class SearchComponent implements OnInit {
       this.productService.buscarProducto(params['termino'])
     })
   }
-
 }

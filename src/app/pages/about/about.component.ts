@@ -11,7 +11,7 @@ export class AboutComponent implements OnInit {
 
   constructor(public _infoService: InfoPaginaService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     
   }
 }
