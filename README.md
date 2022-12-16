@@ -1,5 +1,5 @@
 # Portafolio
-Copia de un template extraido de https://reqres.in/ para ir practicando lo aprendido hasta el momento en Angular.
+Copia de un template extraido de https://www.pixeden.com/ para ir practicando lo aprendido hasta el momento en Angular.
 Un template relativamente simple que consume datos de una base de datos creada en Firebase.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
